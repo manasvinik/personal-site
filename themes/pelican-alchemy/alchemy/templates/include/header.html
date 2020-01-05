@@ -1,4 +1,4 @@
-<div class="row">
+<!-- <div class="row">
   {% if SITEIMAGE %}
     <div class="col-sm-4">
       <a href="{{ SITEURL }}/">
@@ -34,3 +34,35 @@
     {% endif %}
   </div>
 </div>
+ -->
+
+ <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">manasvini krishna</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="/">home</a>
+          </li>
+         <!--  <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#about">blog</a>
+          </li> -->
+       <!--    <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#services">consulting</a>
+          </li> -->
+          {% if DISPLAY_PAGES_ON_MENU %}
+          {% for page in pages %}
+              <a class="nav-link lowercase" href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a>
+            {% endfor %}
+          {% endif %}
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#contact">contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
